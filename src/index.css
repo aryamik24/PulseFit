@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================= */
+/* BASE */
+/* ============================= */
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b0b0c;
+  color: #e5e7eb; /* gray-200 */
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+.card {
+  @apply bg-white/70 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 shadow-sm transition;
+}
+
+.card:hover {
+  @apply shadow-md;
+}
+
+html.dark .card {
+  background-color: #121214;
+  border-color: #27272a;
+  box-shadow: none;
+}
+
+.card-title {
+  @apply text-base font-semibold mb-4 tracking-tight;
+}
+
+/* ============================= */
+/* INPUT */
+/* ============================= */
+.input {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm outline-none transition text-black;
+}
+
+.input:focus {
+  @apply border-black ring-2 ring-black/10;
+}
+
+html.dark .input {
+  background-color: #0f0f11;
+  border-color: #3f3f46;
+  color: #ffffff;
+}
+
+html.dark .input::placeholder {
+  color: #6b7280; /* gray-500 */
+}
+
+html.dark .input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.btn {
+  @apply px-5 py-2.5 rounded-xl bg-black text-white text-sm font-medium transition;
+}
+
+.btn:hover {
+  @apply opacity-90;
+}
+
+html.dark .btn {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ============================= */
+/* TEXT BALANCING (FIXED) */
+/* ============================= */
+html.dark .text-gray-500 {
+  color: rgb(156 163 175); /* gray-400 */
+}
+
+html.dark .text-gray-400 {
+  color: rgb(107 114 128); /* gray-500 */
+}
+
+/* ============================= */
+/* SMALL UTILITIES */
+/* ============================= */
+.section {
+  @apply space-y-6;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+/* ============================= */
+/* AUTH (LOGIN / SIGNUP) */
+/* ============================= */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+html.dark .auth-container {
+  background: #0b0b0c;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  background: white;
+}
+
+html.dark .auth-card {
+  background: #121214;
+  border-color: #27272a;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+html.dark .auth-input {
+  background: #0f0f11;
+  border-color: #3f3f46;
+  color: white;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: black;
+  color: white;
+}
+
+html.dark .auth-button {
+  background: white;
+  color: black;
+}
+
+/* ============================= */
+/* CHIP / TOGGLE BUTTONS */
+/* ============================= */
+.chip {
+  @apply px-4 py-2 rounded-xl text-sm border transition;
+  @apply bg-gray-100 text-gray-700 border-gray-200;
+}
+
+.chip:hover {
+  @apply bg-gray-200;
+}
+
+.chip-active {
+  @apply bg-black text-white border-black;
+}
+
+/* DARK MODE */
+html.dark .chip {
+  background-color: #1a1a1d;
+  border-color: #2a2a2e;
+  color: #a1a1aa;
+}
+
+html.dark .chip:hover {
+  background-color: #232326;
+}
+
+html.dark .chip-active {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
